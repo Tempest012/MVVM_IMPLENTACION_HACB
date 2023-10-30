@@ -55,6 +55,23 @@
                     FontAttributes="Bold"
                     Command="{Binding PNavegarpagina2command}"
                     />
+            <StackLayout HorizontalOptions="Center"
+                         Orientation="Horizontal">
+                <Label TextColor="White"
+                       FontAttributes="Bold"
+                       Text="Picker: "
+                       VerticalOptions="Center"/>
+                <Picker HorizontalOptions="FillAndExpand"
+                        Title="Selecciones una opcion"
+                        SelectedItem="{Binding SeleccionarTipoUsuario}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                           <x:String>Administrador</x:String>
+                           <x:String>Empleado</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
         </StackLayout>
     </Grid>
 </ContentPage>
