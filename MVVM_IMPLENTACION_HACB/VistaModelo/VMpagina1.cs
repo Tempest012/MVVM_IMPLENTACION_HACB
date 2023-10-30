@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVVM_IMPLENTACION_HACB.Vista;
+using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -38,9 +39,9 @@ namespace MVVM_IMPLENTACION_HACB.VistaModelo
         }
         #endregion
         #region PROCESOS
-        public async Task Procesoasync()
+        public async Task Navegarpagina2()
         {
-
+            await Navigation.PushAsync(new Page2());
         }
         public void Sumar()
         {
@@ -59,7 +60,7 @@ namespace MVVM_IMPLENTACION_HACB.VistaModelo
 
         #endregion
         #region COMANDOS
-        public ICommand Procesoasynccommand => new Command(async () => await Procesoasync());
+        public ICommand PNavegarpagina2command => new Command(async () => await Navegarpagina2());
         public ICommand Sumarcommand => new Command(Sumar);
         #endregion
     }

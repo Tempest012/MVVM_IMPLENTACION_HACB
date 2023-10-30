@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVM_IMPLENTACION_HACB.Vista.Page2"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid BackgroundColor="Aqua">
+        <Image Source="https://i.ibb.co/wLBpBfq/flecha-izquierda.png"
+               VerticalOptions="Start"
+               HeightRequest="50"
+               HorizontalOptions="Start"
+               Margin="10">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Volvercommand}"/>
+            </Image.GestureRecognizers>
+        </Image>
+    </Grid>
+</ContentPage>
