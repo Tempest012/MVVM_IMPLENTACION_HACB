@@ -14,9 +14,10 @@
                 <TapGestureRecognizer Command="{Binding Volvercommand}"/>
             </Image.GestureRecognizers>
         </Image>
-        <CollectionView  ItemsSource="{Binding MostraUsuarioscommand}"
+        <CollectionView  ItemsSource="{Binding listausuario}"
                          VerticalOptions="Center"
-                         Margin="20,80,20,0">
+                         Margin="20,80,20,0"
+                         x:Name="listauser">
             <CollectionView.ItemsLayout>
                 <GridItemsLayout Orientation="Vertical"
                                  Span="1"
@@ -34,6 +35,10 @@
                                    FontSize="20"
                                    FontAttributes="Bold"/>
                         </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=BindingContext.Alertacommand,
+                                Source={x:Reference listauser}}"/>
+                        </Frame.GestureRecognizers>
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
