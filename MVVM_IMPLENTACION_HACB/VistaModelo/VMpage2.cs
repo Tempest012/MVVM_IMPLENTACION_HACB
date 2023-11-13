@@ -59,16 +59,16 @@ namespace MVVM_IMPLENTACION_HACB.VistaModelo
                 }
             };
         }
-        public async Task Alerta()
+        public async Task Alerta(Musuario parametros)
         {
-            await DisplayAlert("Titulo", "Mensaje", "ok");
+            await DisplayAlert("Titulo", parametros.Nombre, "Ok");
         }
         #endregion
         #region COMANDOS
         public ICommand Volvercommand => new Command(async () => await Volver());
         //public ICommand MostraUsuarioscommand => new Command(MostraUsuarios);
         //public ICommand ProcesoSimpcommand => new Command(ProcesoSimple);
-        public ICommand Alertacommand => new Command(async () => await Alerta());
+        public ICommand Alertacommand => new Command<Musuario>(async (p) => await Alerta(p));
         #endregion
     }
 }
