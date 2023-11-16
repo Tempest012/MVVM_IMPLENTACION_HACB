@@ -13,13 +13,13 @@ namespace MVVM_IMPLENTACION_HACB.VistaModelo
     {
         #region VARIABLES
         string _Texto;
-        public List<Mmenuprincipal> listausuario { get; set; }
+        public List<Mmenuprincipal> listapagina { get; set; }
         #endregion
         #region CONTRUCTOR
         public VMmenuprincipal(INavigation navigation)
         {
             Navigation = navigation;
-            MostraUsuarios();
+            MostrarPagina();
         }
         #endregion
         #region OBJETOS
@@ -38,13 +38,13 @@ namespace MVVM_IMPLENTACION_HACB.VistaModelo
         {
 
         }
-        public void MostraUsuarios()
+        public void MostrarPagina()
         {
-            listausuario = new List<Mmenuprincipal>
+            listapagina = new List<Mmenuprincipal>
             {
                 new Mmenuprincipal
                 {
-                    Pagina = "Enty, datepicker, picker, label , navegacion",
+                    Pagina = "Enty, datepicker, picker, label , navegación",
                     Icono = "https://i.ibb.co/GMxnP8D/dee6a9929c83caca52904d830909742c.jpg"
 
                 },
@@ -64,11 +64,11 @@ namespace MVVM_IMPLENTACION_HACB.VistaModelo
         {
             string pagina;
             pagina=parametros.Pagina;
-            if(pagina.Contains("Entry, datepicker"))
+            if (pagina.Contains("Crud pokemon"))
             {
                 await Navigation.PushAsync(new Pagina1());
             }
-            if(pagina.Contains("CollectionView sin enlace"))
+            if (pagina.Contains("CollectionView sin enlace"))
             {
                 await Navigation.PushAsync(new Page2());
             }

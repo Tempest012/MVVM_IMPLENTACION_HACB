@@ -19,7 +19,7 @@
     <EmbeddedResource Update="Vista\Crudpokemon.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Vista\Page1.xaml">
+    <EmbeddedResource Update="Vista\MenuPrincipal.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Vista\Page2.xaml">

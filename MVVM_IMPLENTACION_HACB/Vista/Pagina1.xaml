@@ -5,6 +5,15 @@
              NavigationPage.HasNavigationBar="False">
     
     <Grid BackgroundColor="Aqua">
+        <Image Source="https://i.ibb.co/wLBpBfq/flecha-izquierda.png"
+        VerticalOptions="Start"
+        HeightRequest="50"
+        HorizontalOptions="Start"
+        Margin="10">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Volvercommand}"/>
+            </Image.GestureRecognizers>
+        </Image>
         <StackLayout VerticalOptions="Center">
             <StackLayout
                 Orientation="Horizontal"

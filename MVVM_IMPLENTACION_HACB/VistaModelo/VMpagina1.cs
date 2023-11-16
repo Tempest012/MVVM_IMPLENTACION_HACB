@@ -1,4 +1,5 @@
-﻿using MVVM_IMPLENTACION_HACB.Vista;
+﻿using MVVM_IMPLENTACION_HACB.Modelo;
+using MVVM_IMPLENTACION_HACB.Vista;
 using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -55,6 +56,10 @@ namespace MVVM_IMPLENTACION_HACB.VistaModelo
         {
             await Navigation.PushAsync(new Page2());
         }
+        public async Task Volver()
+        {
+            await Navigation.PopAsync();
+        }
         public void Sumar()
         {
             double n1 = 0;
@@ -74,6 +79,8 @@ namespace MVVM_IMPLENTACION_HACB.VistaModelo
         #region COMANDOS
         public ICommand PNavegarpagina2command => new Command(async () => await Navegarpagina2());
         public ICommand Sumarcommand => new Command(Sumar);
+        public ICommand Volvercommand => new Command(async () => await Volver());
+
         #endregion
     }
 }
